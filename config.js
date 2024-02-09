@@ -29,8 +29,8 @@ module.exports = {
         }),
   HANDLERS: (process.env.PREFIX || '^[.,!,artemis_]').trim(),
   SUDO: process.env.SUDO || '0784900006',
-  HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
-  HEROKU_API_KEY: process.env.HEROKU_API_KEY,
+  HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || '',
+  HEROKU_API_KEY: process.env.HEROKU_API_KEY || '',
   BRANCH: 'master',
   STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
   ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE),
@@ -65,8 +65,8 @@ module.exports = {
   DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
     ? toBool(process.env.DISABLE_START_MESSAGE)
     : false,
-  ANTI_BOT: (process.env.ANTI_BOT || 'off').trim(),
-  ANTI_BOT_MESSAGE: process.env.ANTI_BOT_MESSAGE || '&mention removed',
+  ANTI_BOT: (process.env.ANTI_BOT || 'on').trim(),
+  ANTI_BOT_MESSAGE: process.env.ANTI_BOT_MESSAGE || '&mention removed for being a cheap knockoff',
   WARN_MESSAGE:
     process.env.WARN_MESSAGE ||
     '⚠️WARNING⚠️\n*User :* &mention\n*Warn :* &warn\n*Remaining :* &remaining',
